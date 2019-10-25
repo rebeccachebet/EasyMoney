@@ -10,3 +10,7 @@ Increase coding time(3hours to 6hours) and meet deadlines for assigned work
 To continously and consistently share 100% code of implemented interface DAILY
 To daily update TRELLO and have assigned cards in done before next day
 To make research of successes and failures of existing business models(at least 3 daily) to compare and create one.
+
+
+link is below:
+https://mariaangella.github.io/Easy-Money-Credit-System/
