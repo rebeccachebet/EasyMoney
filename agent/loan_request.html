@@ -1,8 +1,11 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
-        Request Loan
+        Make Payment for Member
     </title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
@@ -14,41 +17,41 @@
 
     <div class="container-fluid" style="padding: 8px;">
         <div class="row">
-             <nav class="col-md-3 d-none d-md-block bg-light sidebar">
+            <nav class="col-md-3 d-none d-md-block bg-light sidebar">
                     <div class="sidebar-sticky" style="padding: 8px;max-height: 100vh; height: 100%;">
                         <div class=" nav flex-column profile">
-                           <img src="images/mariaangella.jpg" alt="user profile image"style="width:90px;height:90px;margin: 20px;    border-radius: 50%;" />Consumer Name: Maria Angella    <br>               Group Name: Cohort003  
+                            <img src="images/patrick.webp" alt="user profile image"style="width:90px;height:90px;margin: 20px;    border-radius: 50%;" /> Agent Name: Patrick       <br>       Group Name: Cohort003
                         <hr/><br>                        
                         </div>
                         <br><br>
                     <div class="divider">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link active" href="request_loan.html">
+                                <a class="nav-link" href="register_member.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" class="feather feather-home">
                                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                                         <polyline points="9 22 9 12 15 12 15 22"></polyline>
                                     </svg>
-                                    Request Loan <span class="sr-only">(current)</span>
+                                    Register Member <span class="sr-only">(current)</span>
                                 </a>
                             </li>
                             <br>
                             <li class="nav-item">
-                                <a class="nav-link" href="make_loan_payment.html">
+                                <a class="nav-link active" href="loan_request.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" class="feather feather-file">
                                         <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
                                         <polyline points="13 2 13 9 20 9"></polyline>
                                     </svg>
-                                    Make loan Payment
+                                    Loan Requests
                                 </a>
                             </li>
                             <br>
                             <li class="nav-item">
-                                <a class="nav-link" href="view_loans_history.html">
+                                <a class="nav-link" href="view_outstanging_loans.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" class="feather feather-shopping-cart">
@@ -56,17 +59,29 @@
                                         <circle cx="20" cy="21" r="1"></circle>
                                         <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                                     </svg>
-                                    View Loans History
+                                     View Outstanding Loans
+                        
                                 </a>
                             </li>
                          
                         </ul>
-                     
+                        <h6
+                            class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            
+                        </h6>
+                        <ul class="nav flex-column mb-2">
+                            <li class="nav-item">
+                           
+                            </li>                           
+                        </ul>
+                        <br>
+                        
                     </div>
                 </nav>
-    
+
 
             <main role="main" class="col-md-8 ml-sm-auto col-lg-9 px-4">
+                <div>
                 <div class="chartjs-size-monitor"
                     style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
                     <div class="chartjs-size-monitor-expand"
@@ -77,68 +92,71 @@
                         style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
                         <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
                     </div>
+                    
                 </div>
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2"><img src="images/logo.png" alt="logo"  width="150" height="150" >Request for a desired loan</h1>
+                    <h1 class="h2"><img src="images/logo.png" alt="logo"  width="150" height="150" >Agent's Dashboard</h1>
+                </div>
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Loan Requests</h1>
                 </div>
                 <br>
                 <div class="card">
                     <div class="card-head">
-                        <h5 style="margin-left: 50px;margin-top: 20px;color: white;">Current credit Offer: Ugx 20,000</h5>
+                        <h5 style="margin-left: 50px;margin-top: 20px;color: white;">Maria Angella is requesting for a loan of: UGX 20,000  shs </h5>
                     </div>
+
+                    
                     <div class="card-body">
-                        <form role="form">
-                            <div class="form-group">
-                                <div class="form-row">
-                                    <div class="form-col-md-6">
-                                        <label for="email">Reason</label>
-                                        <input type="text
-                                        " class="form-control" id="email" placeholder="Enter Reason for the loan" style="width:350px;">
-                                    </div>
-                                    <div class="form-col-md-6">
-                                        <label for="pwd">Amount</label>
-                                        <input type="number" class="form-control" id="pwd" placeholder="How much do you need?" min="5000" style="width:245px;">
-                                    </div>
-                                </div>                               
-                            </div>
-                            <div class="form-group">
-                                <div class="form-row">
-                                    <div class="form-col-md-6">
-                                        <label for="email">Choose Installment Plan</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter Reason for the loan" style="width:350px;">
-                                    </div>
-                                    <div class="form-col-md-6">
-                                        <label for="pwd">Pick payment day</label>
-                                        <input type="date" class="form-control" id="pwd" placeholder="Day-Month-Year" style="width:245px;">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </form>
+                       
                     </div>
                     <div class="card-footer">
-                        <button type="button "  class="btn btn-default btn-card" style="color: white;background-color: coral;width:250px;padding: 8px; margin-left: 70px;">Submit request</button>
-                        <a href="view_loans_status.html" class="btn btn-primary btn-md btn-card" role="button" aria-pressed="true"
-                                                    style="width:30%;margin-left: 50px;padding: 10px;">View Your Credit trend</a>
+                        
+                            <a href="#" class="btn btn-primary btn-md btn-card" role="button" aria-pressed="true"
+                            style="width:30%;margin-left: 50px;padding: 10px;color: white;background-color: coral;width:250px;padding: 8px; margin-left: 70px;">Approve </a>
 
+                        <a href="#" class="btn btn-primary btn-md btn-card" role="button" aria-pressed="true"
+                            style="width:30%;margin-left: 50px;padding: 10px;">Decline</a>
+                
+                    </div>
+                
+                </div>
+<br>
+                <div class="card">
+                    <div class="card-head">
+                        <h5 style="margin-left: 50px;margin-top: 20px;color: white;">Luyombya Andrew is requesting for a loan of: UGX 20,000  shs </h5>
                     </div>
 
-                </div>
+                    
+                    <div class="card-body">
+                       
+                    </div>
+                    <div class="card-footer">
+                        
+                            <a href="#" class="btn btn-primary btn-md btn-card" role="button" aria-pressed="true"
+                            style="width:30%;margin-left: 50px;padding: 10px;color: white;background-color: coral;width:250px;padding: 8px; margin-left: 70px;">Approve </a>
 
+                        <a href="#" class="btn btn-primary btn-md btn-card" role="button" aria-pressed="true"
+                            style="width:30%;margin-left: 50px;padding: 10px;">Decline</a>
+                
+                    </div>
+                
+                </div>
+                
             </main>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="/consumer/js/bootstrap.bundle.min.js"
-        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-    <script src="/consumer/js/dashboard.js"></script>
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="/agent/js/bootstrap.bundle.min.js"
+            integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script src="/agent/js/dashboard.js"></script>
 
 </body>
 
