@@ -1,0 +1,75 @@
+extends layout.pug
+
+block content
+    div.row.justify-content-center
+        div.col-md-6
+            div.cardbody
+                header.car-header
+                    h4.card-title Register Group
+                    form(method="POST" action="/register")
+                        <a style="color:red;background:green;"></a>
+                            div.form-row
+                                div.col-form-group
+                                label Group Name
+                                input.form-control(name='groupname')
+                            .form-row
+                                .col-form-group
+                                label Number of Group Members
+                                input.form-control(name='groupmembers')
+                            .form-row
+                                .col-form-group
+                                label Names of Group Members
+                                input.form-control(name='membernames' type='dropdown')
+
+                            .form-row
+                                .col-form-group
+                                label Annual Savings
+                                inut.form-control(name='as')
+                            .form-row
+                                .col-form-group
+                                label Monthly Savings
+                                input.form-control(name='ms')
+                            .form-row
+                                .col-form-group
+                                label Weekly Savings
+                                input.form-control(name='ws')
+                            
+                                
+                                div.col-md-6.form-group
+                                    label Annual Amount Loaned Out
+                                    select#inputState.form-control
+                                        option Choose range
+                                        option Less than 250,000Shs
+                                        option 250,000-500,000Shs
+                                        option 500,000-800,000Shs
+                                        option 800,000-1,000,000Shs
+                                        option 1,000,000-1,500,000Shs
+                                        option 1,500,000-2,000,000Shs
+                                        option 2,000,000-4,000,000Shs
+                                        option Above 4,000,000Shs
+                            
+                                div.col-md-6.form-group
+                                    label Monthly Amount Loaned Out
+                                    select#inputState.form-control
+                                        option Choose range
+                                        option Less than 150,000Shs
+                                        option 150,000-250,000Shs
+                                        option 250,000-350,000Shs
+                                        option 350,000-500,000Shs
+                                        option Above 500,000Shs
+                             
+                            .form-row
+                                .col-form-group
+                                label Password
+                                input.form-control(type="password" name='password')
+                           
+                            .form-row
+                                .col-form-group
+                                label Confirm password
+                                input.form-control(name="create password")
+                            div.form-group
+                                button.btn.btn-primary.btn-block(type="submit") Register
+
+                            
+
+

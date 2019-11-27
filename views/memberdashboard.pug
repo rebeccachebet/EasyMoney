@@ -1,0 +1,38 @@
+extends layout.pug
+
+block content
+    div.row.justify-content-center
+        div.col-md-5
+            div.card-body.border
+                header.card-header
+                    h4.card-title.text-center.pt-1 Group Member Dashboard!!! 
+                    b Hello, #{currentUser.firstname}  
+|&nbsp
+    div.form-row
+        div.col.form-group.col-md-9    
+            form.search(action='/register/search')
+                div.form-row
+                    div.col-md-8
+                        input.form-control(name='city' placeholder="Enter your search term ...")
+                    div.col-md-4
+                        input.btn.btn-dark.btn-block(type="submit")
+        div.col.form-group.col-md-3    
+            form(method="post" action='/register/logout')
+                button.btn.btn-dark.btn-block(type="submit") Log out
+    table.table
+        thead.thead-dark
+            tr
+                th Firstname
+                th Lastname
+                th Username
+                th 
+        tbody
+            each user in users
+                tr
+                    td #{user.firstname}
+                    td #{user.lastname}
+                    td #{user.username}
+                    td
+                        form(method="post" action='/register/delete')
+                            input(type="hidden", placeholder="", name="id", value=user._id)
+                            button.btn.btn-dark.btn-block(type="submit") Delete

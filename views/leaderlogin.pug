@@ -1,0 +1,22 @@
+extends layout.pug
+
+block content
+         div.container
+            br
+            hr
+            div.col-md-6
+                div.card
+                    header.card-header
+                        a.float-right.btn.btn-outline-primary.mt-1(href="#") Group Leader Login
+                        h4.card-title.mt-2 Login
+                    article.card-body
+                        form.form(name="login" method="POST" action="/leaderlogin")
+                            div.form-row
+                                label(for="user_name") Username
+                                input.form-control(name="username" id="user_name" placeholder="")
+                            div.form-row
+                                label password
+                                input.form-control(type="password" name="pass")
+                            div.form-row
+                                div.form-group
+                                button.btn.btn-primary.btn-block(type="submit") Login
