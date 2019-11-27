@@ -1,0 +1,22 @@
+html
+    head
+        link(rel='stylesheet', type='text/css')
+        title Easy Money Login
+    body
+        div.row.justify-content-center
+            div.col-md-6
+                div.cardbody
+                    header.car-header
+                        h4.card-title LOGIN
+                    form(method="POST" action="/login")
+                       
+                            div.form-row
+                                div.col-form-group
+                                label Enter User Name
+                                input.form-control(name='username')
+                            div.form-row
+                                .col-form-group
+                                label Enter Password
+                                input.form-control(name='password')
+                            div.form-group
+                                button.btn.btn-primary.btn-block(type="submit") Login
